@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -67,3 +68,139 @@
 	</section>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Login Page</title>
+        <link rel="stylesheet" type="text/css" href="style.css">     
+    </head>
+
+    <body>
+
+      <div class="btn_grup" id=btn>
+        <button onclick="ocultarDivSignUp()" id="cadastro">Cadastro</button>
+        <button onclick="ocultarDivLogin()" id="login">Login</button>
+      </div>  
+
+      <h1>Bem-vindo ao Woofo!</h1><br>
+
+      <h3>A rede social feita para seu pet.</h3>
+
+      <div class="container">
+        <div class="CriarConta" id="idcriarconta">
+          <h2>Criar Conta</h2>
+          <form id="signup_form">
+          
+            <label for="name">Nome:</label>
+            <input type="text" name="name" id="name" /><br>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email"/><br>
+          
+            <label for="password">Senha:</label>
+            <input type="password" name="password" id="password"/><br>
+          
+            <button type="submit">Criar Conta!</button>
+          </form>
+        </div>
+        <div class="Login" id="idlogin">
+          <h2>Login</h2>
+          <form id="login_form">
+
+            <label for="emailLogin">Email:</label>
+            <input type="email" name="emailLogin" id="emaillogin" /><br>
+          
+            <label for="passwordLogin">Senha:</label>
+            <input type="password" name="passwordlogin" id="passwordlogin" /><br>
+
+            <button type="submit" id="btnlogar">Logar!</button>
+          </form>
+        </div>
+        <img src="static\LogoLogin.png" alt="dasd" id="imagem">
+      </div>      
+    </body>
+    <script>
+      var login = document.getElementById("idlogin");
+      var signup = document.getElementById("idcriarconta")
+      login.style.display = "none";
+      signup.style.display="";
+      function ocultarDivSignUp() {
+        login.style.display = "none";
+        signup.style.display=""
+      }
+      function ocultarDivLogin() {
+        login.style.display = "";
+        signup.style.display="none";
+      }
+    </script>
+    <script type="module">
+      import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js';
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-analytics.js";
+      import { getAuth, createUserWithEmailAndPassword ,signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-auth.js";
+      import { getFirestore } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyDzRbVbrB7ZjJw-HylA5HM9DZ8Taf0eiiI",
+        authDomain: "woof0-75c1f.firebaseapp.com",
+        projectId: "woof0-75c1f",
+        storageBucket: "woof0-75c1f.appspot.com",
+        messagingSenderId: "10079225691",
+        appId: "1:10079225691:web:a8c0e222346ef945a4bc7e",
+        measurementId: "G-4R28M6JFQ4"
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      const auth = getAuth(app);
+      const db = getFirestore(app);
+
+      const signUpForm = document.getElementById('signup_form');
+        signUpForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+
+          const email = signUpForm.email.value;
+          const password = signUpForm.password.value;
+
+          createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+              const user = userCredential.user;
+              console.log('Usuário criado:', user);
+              alert('Usuário criado com sucesso')
+            })
+            .catch((error) => {
+              const errorCode = error.code;
+              const errorMessage = error.message;
+              console.error(errorCode, errorMessage);
+              alert('Erro! Tente novamente.')
+            });
+        });
+
+      const loginForm = document.getElementById('login_form');
+        loginForm.addEventListener('submit', (e) =>{
+          e.preventDefault();
+
+          const emailLogin = loginForm.emaillogin.value;
+          const passwordLogin = loginForm.passwordlogin.value;
+
+          signInWithEmailAndPassword(auth, emailLogin, passwordLogin)
+            .then((userCredential) => {          
+              const user = userCredential.user;
+              console.log('Usuário Logado:', user);
+              alert('Usuário logado com sucesso')
+              window.location.href = "home.html";
+          
+            })
+            .catch((error) => {
+              const errorCode = error.code;
+              const errorMessage = error.message;
+              console.error(errorCode, errorMessage);
+              alert('Erro! Tente novamente.')
+            });
+        });
+
+    </script>
+</html>
+
+>>>>>>> 96a43c71cd1c033638ff0520192a0986ea1e1278
