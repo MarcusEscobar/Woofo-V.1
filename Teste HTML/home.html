@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+      <title>Home Page</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="homeStyle.css">
+    </head>
+
+    <body>
+      <div class="cabecalho">
+        <div class="title">
+          <button class="woofoBtn" onclick="referesh()">Woofo</button>
+        </div>
+
+        <div class="post-btn">
+          <button onclick="ocultarpage()" id="btn_post">POSTAR!</button>
+        </div> 
+
+        <div class="logo">
+          <img src="static/LOGINSmallT.png" id="logoid">
+        </div>
+      </div>
+      <div class="postFormExterno">
+        <div class="postForm-div" id="formPost">
+          <form id="post_form">
+          <h2>Postar foto</h2>
+  
+          <label for="image" class="labelInput">Escolha uma foto:</label>
+          <input type="file" name="image" id="image" accept="image/*"/><br>
+  
+          <button type="submit">Postar</button>
+          </form>
+        </div>
+
+      </div>
+      
+      <div class="homepage" id="homeid">
+        <div  class="classFeed" id="feed">
+            <!-- feed -->
+        </div>     
+      </div>
+      
+        
+     <script type="module" src="appModuleHome.js"></script>
+     <script src="appHome.js"></script>
+    </body>
+</html>
