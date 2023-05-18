@@ -1,14 +1,12 @@
-# betta_woofo
-repositório para upload e códigos iniciais do projeto woofo.
+Sprints Woofo
 
-(escrito dia 08/04/2023)
-Etapa inicial:
-backend --> python, framework --> Flask*
-                                       '-->*(Iicialmento o framework seria o DJango, 
-                                             porem devida a alta complexidade dos multiplos arquivos craidos pelo Djando 
-                                             o framework foi mudado para Flask)
-Descrição do desenvolvimento:
-
-  Inicialmente temos apenas um aquivo .py (app.py), que utilida do Flask para criar e gerenciar as URLs, a sintaxe do Flask é bem simples e pode ser entendiada facilmente, diferente do Django que necessitava se multiplos arquivos para a criação e gerenciamento das páginas.
-  Cada URL criada pelo faz trabalha simultaneamente com um arquivo .html, dessa forma o framework fica responsavel por gerar o servidor local, e renderizar as páginas HTML.
-  Por enquanto temos 3 paginas, uma inicial, denominada Home, que é acessada diretamente pelo link do servidor gerado pelo Flask, a seginda aba é um teste de imagens tendo 2 imagens upadas, uma em fortado .JPG e outra .PNG, inicialmete o Flask não apresenta dificuldades quanto ao formato do arquivo, porem talvez tenhamos dificuldade de upar multiplas fotos para a craição de um feed, mas é preocupação para as próximas etápas do projeto. E por fim a terceira aba é um texte de texto, de como o Flask e o HTML trabalham juntos para a aparição de textos em tela.
+-1° Criação da página de login e cadastro ✔
+-2° Criação da página principal, feed e postagem ✔
+-3° Desenvolvimento da aparência da página principal (sprint atual)
+-4° Implementação da estilização da página principal
+-5° Desenvolvimento de comentários nas postagens
+-6° Postagem de textos no feed da página principal
+-7° Criação de perfil de usuários
+-8° Criação de chat entre usuário
+-9° Correção de bugs e polimentos finais
+-10° Deploy e liberação da rede para uso
