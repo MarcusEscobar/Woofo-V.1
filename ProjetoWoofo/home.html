@@ -1,16 +1,16 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
-
     <head>
       <title>Home Page</title>
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;700&display=swap" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="homeStyle.css">
+      <script type="module" src="homeApp.js"></script>
     </head>
 
     <body>
+      <div class="Home" id="Home">
       <div class="cabecalho">
         <div class="title">
           <button class="woofoBtn" onclick="referesh()">Woofo</button>
@@ -43,20 +43,22 @@
             <!-- feed -->
         </div>     
       </div>
-      
-        
-     <script type="module" src="appModuleHome.js"></script>
-     <script src="appHome.js"></script>
+      </div>
     </body>
-=======
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Home</title>
-    </head>
-    <body>
-        <h1>Home</h1>
-        <img src="static/1.png" alt="woofo">
-    </body>
->>>>>>> 96a43c71cd1c033638ff0520192a0986ea1e1278
+   
+    <script>   
+       var hidePage = document.getElementById("formPost");
+       var hideHomePage = document.getElementById("homeid");
+       var hidePostBtn = document.getElementById("btn_post");
+       hidePage.style.display="none";
+
+       function ocultarpage(){
+         hidePage.style.display="";
+         hideHomePage.style.display="none"
+         hidePostBtn.style.display="none"
+         console.log('apertou botão');
+       }
+       function referesh(){
+         location.reload()}
+    </script>
 </html>
