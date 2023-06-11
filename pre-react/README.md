@@ -1,12 +1,3 @@
-Sprints Woofo
-
--1° Criação da página de login e cadastro ✔
--2° Criação da página principal, feed e postagem ✔
--3° Desenvolvimento da aparência da página principal ✔
--4° Implementação da estilização da página principal ✔
--5° Desenvolvimento de comentários nas postagens (Sprint Atual)
--6° Postagem de textos no feed da página principal
--7° Criação de perfil de usuários
--8° Criação de chat entre usuário
--9° Correção de bugs e polimentos finais
--10° Deploy e liberação da rede para uso
+Intruções React.
+Primeiro crie um app react, para isso baixe o node.js e use o comando: npx create-react-app 'nome que tu quiser'. depois coloque o arquivo firebase.js dentro da pasta do app que tu criou, depois tu pega a pasta components e coloca dentro da pasta src. só vai faltar um aquivo que é o config.js, não podemos compartilhar esse arquivo no git, é so pedir no grupo que o duque manda o arquivo. Esse arquivo config.js tu vai colar ele dentro da pasta do react igual o arquivo firebase.js e tbm coloca dentro da pasta src, igualzin a pasta components, qualquer dúvida pergunta no grupo.
+Obs:(Tive que botar os arquivos separados no git pq é inviável fazer o upload completo do app react)
